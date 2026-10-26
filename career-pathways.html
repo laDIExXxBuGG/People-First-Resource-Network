@@ -1,0 +1,812 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102a43">
+  <meta name="description" content="Explore free education, career exploration, job skills, apprenticeships, and workforce resources through People First Resource Network.">
+  <title>Further Education, Skills & Career Pathways | People First Resource Network</title>
+
+  <style>
+    :root {
+      --navy: #102a43;
+      --navy-light: #243f58;
+      --teal: #0f8b8d;
+      --teal-dark: #086b6d;
+      --white: #ffffff;
+      --background: #f3f8fa;
+      --text: #243746;
+      --muted: #536777;
+      --border: #d5e3e8;
+      --soft-teal: #e6f6f4;
+      --soft-blue: #eaf1f8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--teal-dark);
+      overflow-wrap: anywhere;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible {
+      outline: 3px solid #f0b429;
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 12px;
+      background: var(--white);
+      color: var(--navy);
+      padding: 10px 14px;
+      z-index: 10;
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 26px 18px 34px;
+    }
+
+    .header-inner,
+    main,
+    footer {
+      width: min(1080px, 100%);
+      margin: 0 auto;
+    }
+
+    .brand {
+      font-size: 0.92rem;
+      font-weight: bold;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #a8e7e2;
+    }
+
+    .tagline {
+      margin: 4px 0 22px;
+      color: #e2f4f5;
+      font-size: 0.95rem;
+    }
+
+    .breadcrumbs {
+      margin: 0 0 18px;
+      font-size: 0.92rem;
+    }
+
+    .breadcrumbs a {
+      color: #bcece8;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.25;
+    }
+
+    h1 {
+      max-width: 800px;
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 6vw, 3rem);
+    }
+
+    .hero-text {
+      max-width: 760px;
+      margin: 0;
+      color: #edf6fa;
+      font-size: 1.08rem;
+    }
+
+    .guiding-phrase {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 8px 13px;
+      border: 1px solid #72cbc5;
+      border-radius: 8px;
+      color: #d9fffb;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 24px 16px 40px;
+    }
+
+    section {
+      margin-bottom: 28px;
+    }
+
+    .panel {
+      padding: 22px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--navy);
+      font-size: 1.55rem;
+    }
+
+    h3 {
+      margin-top: 0;
+      color: var(--navy);
+      font-size: 1.12rem;
+    }
+
+    .intro {
+      font-size: 1.04rem;
+    }
+
+    .notice {
+      padding: 14px 16px;
+      background: var(--soft-teal);
+      border-left: 5px solid var(--teal);
+      border-radius: 7px;
+    }
+
+    .search-area {
+      margin-top: 18px;
+    }
+
+    .search-area label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--navy);
+      font-weight: bold;
+    }
+
+    .search-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .search-row input {
+      flex: 1;
+      min-width: 0;
+      padding: 13px;
+      border: 1px solid #9cb5c1;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: white;
+      color: var(--text);
+    }
+
+    button,
+    .button-link {
+      display: inline-block;
+      padding: 12px 16px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--teal-dark);
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    button:hover,
+    .button-link:hover {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .clear-button {
+      margin-top: 10px;
+      background: var(--soft-blue);
+      color: var(--navy);
+    }
+
+    .clear-button:hover {
+      background: #d4e5f0;
+      color: var(--navy);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .resource-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 19px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      min-width: 0;
+    }
+
+    .resource-card p {
+      margin-top: 0;
+    }
+
+    .resource-card .resource-type {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 4px 8px;
+      background: var(--soft-blue);
+      border-radius: 5px;
+      color: var(--navy);
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    .resource-card a {
+      margin-top: auto;
+      padding-top: 8px;
+      font-weight: bold;
+    }
+
+    .small {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .steps {
+      padding-left: 24px;
+    }
+
+    .steps li {
+      margin-bottom: 10px;
+    }
+
+    .checklist {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .checklist li {
+      margin-bottom: 10px;
+    }
+
+    .checklist li::before {
+      content: "□ ";
+      color: var(--teal-dark);
+      font-weight: bold;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .soft-card {
+      padding: 18px;
+      background: var(--soft-blue);
+      border-radius: 10px;
+    }
+
+    .soft-card.teal {
+      background: var(--soft-teal);
+    }
+
+    .link-list li {
+      margin-bottom: 9px;
+    }
+
+    .last-verified {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer {
+      padding: 26px 18px;
+      background: var(--navy);
+      color: #edf6fa;
+      border-radius: 14px 14px 0 0;
+    }
+
+    footer a {
+      color: #bcece8;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      margin: 12px 0;
+    }
+
+    .empty-state {
+      padding: 20px;
+      background: var(--soft-blue);
+      border-radius: 10px;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    @media (max-width: 650px) {
+      .grid,
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .search-row {
+        flex-direction: column;
+      }
+
+      .search-row button {
+        width: 100%;
+      }
+
+      .panel {
+        padding: 17px;
+      }
+
+      .resource-card {
+        padding: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <div class="header-inner">
+      <div class="brand">People First Resource Network</div>
+      <p class="tagline">Real resources. Real people. Real possibilities.</p>
+
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a> / Further Education, Skills & Career Pathways
+      </nav>
+
+      <h1>Further Education, Skills & Career Pathways</h1>
+      <p class="hero-text">
+        Your next step does not have to look like everyone else's.
+        Explore free learning tools, career guidance, job training, apprenticeships,
+        and other ways to build skills and move toward your goals.
+      </p>
+      <div class="guiding-phrase">There Is Always Another Step.</div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="panel">
+      <h2>Start where you are</h2>
+      <p class="intro">
+        Whether you are changing careers, returning to learning, exploring work
+        for the first time, or trying to find a path that fits your circumstances,
+        you deserve clear information and options you can realistically pursue.
+      </p>
+
+      <div class="notice">
+        <strong>Free-first promise:</strong> This page prioritizes free public
+        resources and learning tools. Some training programs may have eligibility
+        rules, limited funding, waitlists, equipment costs, or other expenses.
+        Confirm all costs before enrolling or sharing personal information.
+      </div>
+
+      <div class="search-area">
+        <label for="resourceSearch">What kind of help are you looking for?</label>
+        <div class="search-row">
+          <input
+            id="resourceSearch"
+            type="search"
+            placeholder="Example: free computer classes"
+            aria-describedby="searchHelp"
+          >
+          <button id="searchButton" type="button">Find resources</button>
+        </div>
+        <p id="searchHelp" class="small">
+          Search by your need, not a program name. Try “career change,”
+          “apprenticeship,” “disability,” “online learning,” or “job training.”
+        </p>
+        <button id="clearSearch" class="clear-button" type="button">Show all resources</button>
+        <p id="searchStatus" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section aria-labelledby="resources-heading">
+      <h2 id="resources-heading">Explore resources</h2>
+
+      <div class="grid" id="resourceGrid">
+        <article class="resource-card" data-keywords="career exploration interests skills jobs occupations salary training free career change">
+          <span class="resource-type">Career exploration</span>
+          <h3>CareerOneStop</h3>
+          <p>
+            Explore occupations, compare career options, investigate training,
+            and find job-search tools through the U.S. Department of Labor.
+          </p>
+          <p class="small">Cost: Many information and search tools are free. Individual training programs may charge fees.</p>
+          <a href="https://www.careeronestop.org/" target="_blank" rel="noopener noreferrer">Explore CareerOneStop</a>
+        </article>
+
+        <article class="resource-card" data-keywords="onet interest profiler career assessment abilities skills work values occupations">
+          <span class="resource-type">Find a direction</span>
+          <h3>O*NET Online</h3>
+          <p>
+            Research occupations, typical tasks, work environments, skills,
+            and interests to help identify careers worth exploring.
+          </p>
+          <p class="small">Cost: Free career information and exploration tools.</p>
+          <a href="https://www.onetonline.org/" target="_blank" rel="noopener noreferrer">Explore O*NET</a>
+        </article>
+
+        <article class="resource-card" data-keywords="pennsylvania careerlink workforce job center resume job search unemployment training local pennsylvania">
+          <span class="resource-type">Pennsylvania support</span>
+          <h3>PA CareerLink</h3>
+          <p>
+            Find Pennsylvania workforce services, career support, job-search
+            assistance, and information about available training opportunities.
+          </p>
+          <p class="small">Cost: Many public workforce services are free. Availability and eligibility vary by program and location.</p>
+          <a href="https://www.pacareerlink.pa.gov/" target="_blank" rel="noopener noreferrer">Visit PA CareerLink</a>
+        </article>
+
+        <article class="resource-card" data-keywords="american job center workforce services career counselor resume training job seeker united states">
+          <span class="resource-type">Workforce services</span>
+          <h3>American Job Centers</h3>
+          <p>
+            Locate public workforce centers that may offer career counseling,
+            employment services, workshops, and training referrals.
+          </p>
+          <p class="small">Cost: Many services are free. Ask about eligibility, appointments, remote services, and transportation support.</p>
+          <a href="https://www.careeronestop.org/LocalHelp/AmericanJobCenters/american-job-centers.aspx" target="_blank" rel="noopener noreferrer">Find an American Job Center</a>
+        </article>
+
+        <article class="resource-card" data-keywords="apprenticeship paid earn while learn skilled trades technology healthcare employer training">
+          <span class="resource-type">Earn while learning</span>
+          <h3>Apprenticeship.gov</h3>
+          <p>
+            Learn how registered apprenticeships combine paid work with
+            structured instruction and on-the-job training.
+          </p>
+          <p class="small">Cost and pay: Apprenticeships are generally paid employment, but terms, entry requirements, and any expenses vary.</p>
+          <a href="https://www.apprenticeship.gov/" target="_blank" rel="noopener noreferrer">Explore apprenticeships</a>
+        </article>
+
+        <article class="resource-card" data-keywords="free online classes computer skills typing internet digital literacy gcfglobal">
+          <span class="resource-type">Free online learning</span>
+          <h3>GCFGlobal</h3>
+          <p>
+            Build practical skills in computers, internet use, everyday technology,
+            workplace readiness, and other subjects through free tutorials.
+          </p>
+          <p class="small">Cost: Free learning materials.</p>
+          <a href="https://edu.gcfglobal.org/" target="_blank" rel="noopener noreferrer">Start learning with GCFGlobal</a>
+        </article>
+
+        <article class="resource-card" data-keywords="khan academy free math reading science computing economics learning lessons practice">
+          <span class="resource-type">Build foundational skills</span>
+          <h3>Khan Academy</h3>
+          <p>
+            Strengthen math, reading-related academic foundations, science,
+            computing, and other subjects at your own pace.
+          </p>
+          <p class="small">Cost: Core learning resources are free. Internet access and a suitable device may be needed.</p>
+          <a href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer">Explore Khan Academy</a>
+        </article>
+
+        <article class="resource-card" data-keywords="microsoft learn free technology digital skills coding cloud data certifications">
+          <span class="resource-type">Technology skills</span>
+          <h3>Microsoft Learn</h3>
+          <p>
+            Access learning paths and tutorials for technology topics, including
+            Microsoft products, cloud services, data, and software development.
+          </p>
+          <p class="small">Cost: Learning materials are free. Some certification exams and related services may cost money.</p>
+          <a href="https://learn.microsoft.com/training/" target="_blank" rel="noopener noreferrer">Explore Microsoft Learn</a>
+        </article>
+
+        <article class="resource-card" data-keywords="job corps youth ages 16 24 free career technical training housing eligibility education">
+          <span class="resource-type">Youth training</span>
+          <h3>Job Corps</h3>
+          <p>
+            Explore a federal education and career-training program for eligible
+            young people. Certain supports may be available depending on the
+            participant and program.
+          </p>
+          <p class="small">Eligibility: Generally ages 16–24, subject to program requirements. Confirm current rules and available services directly.</p>
+          <a href="https://www.jobcorps.gov/" target="_blank" rel="noopener noreferrer">Check Job Corps eligibility</a>
+        </article>
+
+        <article class="resource-card" data-keywords="federal student aid FAFSA grants college trade school vocational education financial aid">
+          <span class="resource-type">Education funding</span>
+          <h3>Federal Student Aid</h3>
+          <p>
+            Learn about federal financial aid, the FAFSA form, grants, work-study,
+            and student loans before choosing an education or training program.
+          </p>
+          <p class="small">Cost: Federal Student Aid information and the FAFSA are free. Be cautious of services charging to complete the form.</p>
+          <a href="https://studentaid.gov/" target="_blank" rel="noopener noreferrer">Explore federal student aid</a>
+        </article>
+
+        <article class="resource-card" data-keywords="vocational rehabilitation disability work career counseling employment accommodation training state agency">
+          <span class="resource-type">Disability-inclusive career support</span>
+          <h3>State Vocational Rehabilitation</h3>
+          <p>
+            State vocational rehabilitation agencies may help eligible people
+            with disabilities explore careers, prepare for work, obtain training,
+            and address disability-related employment barriers.
+          </p>
+          <p class="small">Cost and eligibility: Services and financial rules vary. Ask the agency about eligibility, covered expenses, and accommodations.</p>
+          <a href="https://rsa.ed.gov/about/states" target="_blank" rel="noopener noreferrer">Find a state vocational rehabilitation agency</a>
+        </article>
+
+        <article class="resource-card" data-keywords="ticket to work social security disability beneficiaries employment support benefits counseling career training free">
+          <span class="resource-type">Work while receiving benefits</span>
+          <h3>Social Security Ticket to Work</h3>
+          <p>
+            Eligible Social Security disability beneficiaries may be able to
+            access employment services and supports while exploring work goals.
+          </p>
+          <p class="small">Eligibility: Program rules apply. Understand how earnings may affect benefits before making changes.</p>
+          <a href="https://choosework.ssa.gov/" target="_blank" rel="noopener noreferrer">Explore Ticket to Work</a>
+        </article>
+
+        <article class="resource-card" data-keywords="small business self employment freelance independent worker entrepreneurship business planning free resources">
+          <span class="resource-type">Independent work</span>
+          <h3>U.S. Small Business Administration</h3>
+          <p>
+            If self-employment may fit your goals, explore business planning,
+            startup guidance, and links to counseling and support resources.
+          </p>
+          <p class="small">Cost: Many SBA guides are free. Business registration, licenses, insurance, and other startup expenses may apply.</p>
+          <a href="https://www.sba.gov/" target="_blank" rel="noopener noreferrer">Explore small-business resources</a>
+        </article>
+
+        <article class="resource-card" data-keywords="resume cover letter interview job search career planning work experience skills free labor">
+          <span class="resource-type">Job-search preparation</span>
+          <h3>CareerOneStop Resume Guide</h3>
+          <p>
+            Get guidance on resumes, cover letters, interviews, and presenting
+            your experience and transferable skills to employers.
+          </p>
+          <p class="small">Cost: Free guidance and tools.</p>
+          <a href="https://www.careeronestop.org/JobSearch/Resumes/resumes.aspx" target="_blank" rel="noopener noreferrer">Build your job-search materials</a>
+        </article>
+      </div>
+
+      <div id="emptyState" class="empty-state" hidden>
+        <h3>No matching resources found</h3>
+        <p>
+          Try a broader search term, such as “training,” “computer,” “career,”
+          “disability,” or “free classes.” You can also show all resources again.
+        </p>
+        <p>
+          If the first route does not fit, that does not mean you have run out of options.
+        </p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Make a plan that fits your circumstances</h2>
+      <p>
+        You do not need to have everything figured out before taking a first step.
+        Use this checklist to prepare for a conversation with a training provider,
+        workforce agency, school, or career counselor.
+      </p>
+
+      <ul class="checklist">
+        <li>Identify one or two interests, skills, or types of work you want to explore.</li>
+        <li>Write down what you need to learn, improve, or have recognized.</li>
+        <li>Ask whether the program is free and whether there are fees for materials, exams, equipment, or transportation.</li>
+        <li>Ask about eligibility, required documents, application deadlines, and waitlists.</li>
+        <li>Check whether classes are online, in person, self-paced, or available at flexible times.</li>
+        <li>Ask about accommodations, accessible formats, remote participation, and disability-related support if needed.</li>
+        <li>Confirm whether completing the program leads to a recognized credential, license, qualification, or employer pathway.</li>
+        <li>Save the official link, contact details, requirements, and date you checked the information.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>When the usual path does not work</h2>
+
+      <div class="two-column">
+        <div class="soft-card teal">
+          <h3>If a program costs too much</h3>
+          <p>
+            Ask about fee waivers, scholarships, publicly funded training,
+            workforce funding, library-based learning, and free introductory courses.
+            Confirm the total cost before committing.
+          </p>
+        </div>
+
+        <div class="soft-card">
+          <h3>If you cannot attend in person</h3>
+          <p>
+            Ask about remote enrollment, online classes, phone or video appointments,
+            mailed materials, flexible schedules, and available transportation assistance.
+            Do not assume every provider offers these options.
+          </p>
+        </div>
+
+        <div class="soft-card">
+          <h3>If disability creates barriers</h3>
+          <p>
+            Explore vocational rehabilitation, workplace accommodations, accessible
+            training, and disability-specific employment support. Ask about the
+            application process and eligibility.
+          </p>
+        </div>
+
+        <div class="soft-card teal">
+          <h3>If you are not eligible or the program is full</h3>
+          <p>
+            Ask for the specific reason, the next enrollment date, an appeal or
+            review process if available, and referrals to other programs with
+            different eligibility requirements.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Your personal planning worksheet</h2>
+      <p>
+        You can copy these prompts into your own notes. You do not need to enter
+        private information on this website.
+      </p>
+
+      <ol class="steps">
+        <li><strong>My goal:</strong> What would I like to learn, do, or change?</li>
+        <li><strong>My starting point:</strong> What experience, skills, or education do I already have?</li>
+        <li><strong>My barriers:</strong> What could make this difficult, such as cost, transportation, health, disability, time, or technology?</li>
+        <li><strong>My requirements:</strong> What documents, qualifications, or application steps are needed?</li>
+        <li><strong>My first action:</strong> What is one manageable thing I can do next?</li>
+        <li><strong>My backup plan:</strong> If this option does not work, which alternative can I investigate?</li>
+      </ol>
+
+      <div class="notice">
+        <strong>Privacy first:</strong> This page does not need your Social Security
+        number, medical records, passwords, or financial account details. Share
+        sensitive information only when it is required by a legitimate provider
+        through an appropriate, secure process.
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Explore connected support</h2>
+      <p>
+        Career and education goals can overlap with benefits, disability support,
+        paperwork, and other practical needs. These sections may help you plan
+        your next step.
+      </p>
+
+      <ul class="link-list">
+        <li><a href="education.html">Education & Homeschooling</a> — learning options and educational resources.</li>
+        <li><a href="disability.html">Disability & Accessibility Center</a> — accessibility, accommodations, and disability-related support.</li>
+        <li><a href="forms.html">Forms & Paperwork Help</a> — understand applications and prepare documents.</li>
+        <li><a href="benefits.html">Benefits & Basic Needs</a> — explore assistance with essential needs.</li>
+        <li><a href="index.html">People First Resource Network Home</a> — return to the main directory.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Trust, verification, and limitations</h2>
+      <p>
+        Links on this page are intended as starting points, with priority given
+        to official government or established educational resources. A link does
+        not guarantee that a program is accepting applications, has funding,
+        is available in your area, or will determine you eligible.
+      </p>
+      <p>
+        Before applying, verify current eligibility rules, deadlines, costs,
+        availability, accessibility, and contact details directly with the provider.
+        Avoid paying a third party just to access information that is offered free
+        by an official source.
+      </p>
+      <p>
+        Career information is general guidance, not a promise of employment,
+        earnings, certification, or admission to a program.
+      </p>
+      <p class="last-verified">
+        <strong>Last reviewed for this page:</strong> October 2026.
+        Individual program details and availability have not all been independently
+        confirmed. Check each official website for current information.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="header-inner">
+      <strong>People First Resource Network</strong>
+      <p>Real resources. Real people. Real possibilities.</p>
+      <p><em>There Is Always Another Step.</em></p>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="benefits.html">Benefits & Basic Needs</a>
+        <a href="legal-support.html">Pro Se Legal Support</a>
+        <a href="forms.html">Forms & Paperwork Help</a>
+        <a href="education.html">Education & Homeschooling</a>
+        <a href="disability.html">Disability & Accessibility</a>
+      </nav>
+
+      <p class="small" style="color:#d8e7ee;">
+        This resource directory provides general information and is not a substitute
+        for individualized professional advice. Verify details with the relevant provider.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById("resourceSearch");
+    const searchButton = document.getElementById("searchButton");
+    const clearButton = document.getElementById("clearSearch");
+    const searchStatus = document.getElementById("searchStatus");
+    const emptyState = document.getElementById("emptyState");
+    const cards = Array.from(document.querySelectorAll(".resource-card"));
+
+    function searchResources() {
+      const query = searchInput.value.trim().toLowerCase();
+      const terms = query.split(/\s+/).filter(Boolean);
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        const searchableText = (
+          card.innerText + " " + (card.dataset.keywords || "")
+        ).toLowerCase();
+
+        const matches = terms.length === 0 ||
+          terms.every((term) => searchableText.includes(term));
+
+        card.hidden = !matches;
+
+        if (matches) {
+          visibleCount++;
+        }
+      });
+
+      emptyState.hidden = visibleCount !== 0;
+      searchStatus.textContent = query
+        ? `${visibleCount} of ${cards.length} resources match your search.`
+        : `Showing all ${cards.length} resources.`;
+    }
+
+    function clearSearch() {
+      searchInput.value = "";
+      searchResources();
+      searchInput.focus();
+    }
+
+    searchButton.addEventListener("click", searchResources);
+    clearButton.addEventListener("click", clearSearch);
+
+    searchInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        searchResources();
+      }
+    });
+
+    searchInput.addEventListener("input", searchResources);
+
+    searchResources();
+  </script>
+</body>
+</html>
