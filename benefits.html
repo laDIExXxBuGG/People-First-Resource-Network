@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12304a">
+  <meta name="description" content="Explore food, healthcare, disability, housing, and financial assistance resources.">
+  <title>Benefits &amp; Basic Needs | People First Resource Network</title>
+  <style>
+    :root {
+      --navy: #12304a;
+      --teal: #168c8c;
+      --pale: #eaf7f6;
+      --ink: #203746;
+      --muted: #526777;
+      --border: #d6e5e8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: var(--ink);
+      background: #f6fafb;
+    }
+
+    a { color: #086c75; }
+
+    a:focus-visible, button:focus-visible, input:focus-visible {
+      outline: 3px solid var(--teal);
+      outline-offset: 3px;
+    }
+
+    header {
+      background: var(--navy);
+      padding: 18px;
+      color: white;
+    }
+
+    .header-inner, main, footer {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .brand {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .brand span { color: #79dfd2; }
+
+    .back {
+      display: inline-block;
+      margin-top: 8px;
+      color: white;
+    }
+
+    .hero {
+      padding: 42px 20px;
+      text-align: center;
+      background: linear-gradient(145deg, #eaf7f6, white);
+    }
+
+    .hero-inner {
+      max-width: 760px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: #086c75;
+      font-size: .82rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      color: var(--navy);
+      font-size: clamp(2rem, 7vw, 3rem);
+      line-height: 1.2;
+      margin: 12px 0;
+    }
+
+    h2, h3 { color: var(--navy); }
+
+    .hero p { color: var(--muted); }
+
+    .tagline {
+      color: var(--teal);
+      font-weight: bold;
+    }
+
+    main { padding: 28px 18px 45px; }
+
+    .intro {
+      max-width: 760px;
+      text-align: center;
+      margin: 0 auto 28px;
+    }
+
+    .intro p { color: var(--muted); }
+
+    .search-area, .card, .steps {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+    }
+
+    .search-area { margin-bottom: 28px; }
+
+    .search-area label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .search-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .search-row input {
+      flex: 1;
+      min-width: 0;
+      padding: 12px;
+      border: 1px solid #9cb5bf;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 12px 16px;
+      background: var(--teal);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover { background: #106e72; }
+
+    #search-result {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card h3 { margin-top: 0; }
+    .card p { color: var(--muted); }
+    .card a { font-weight: bold; }
+
+    .steps { margin-top: 28px; }
+    .steps li { margin: 10px 0; }
+
+    .callout {
+      margin-top: 24px;
+      padding: 18px;
+      border-left: 5px solid var(--teal);
+      background: var(--pale);
+      border-radius: 8px;
+    }
+
+    .hidden { display: none !important; }
+
+    footer {
+      padding: 24px 18px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    @media (max-width: 520px) {
+      .search-row { flex-direction: column; }
+      .search-row button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        People First <span>Resource Network</span>
+      </a>
+      <br>
+      <a class="back" href="index.html">← Back to homepage</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Division 1</div>
+      <h1>Benefits &amp; Basic Needs</h1>
+      <p class="tagline">Help with essentials. Guidance for the next step.</p>
+      <p>
+        Explore options for food, healthcare, housing, disability benefits,
+        utilities, and other everyday needs. You do not have to know a
+        program's name to begin.
+      </p>
+    </div>
+  </section>
+
+  <main>
+    <section class="intro">
+      <h2>What do you need help with?</h2>
+      <p>
+        Start with the type of assistance you need. These links lead to
+        official information sources where available.
+      </p>
+    </section>
+
+    <section class="search-area" aria-label="Search assistance topics">
+      <form id="search-form">
+        <label for="resource-search">Search assistance topics</label>
+        <div class="search-row">
+          <input id="resource-search" type="search"
+            placeholder="Try food, medical, rent, or utilities">
+          <button type="submit">Search topics</button>
+        </div>
+      </form>
+      <p id="search-result" aria-live="polite">
+        Showing all assistance topics.
+      </p>
+    </section>
+
+    <section class="resource-grid" id="resource-cards">
+      <article class="card" data-search="food snap pantry groceries hunger meals">
+        <h3>Food &amp; Grocery Assistance</h3>
+        <p>
+          Learn about food benefits, food banks, meal programs, and
+          other options for getting groceries.
+        </p>
+        <a href="https://www.fns.usda.gov/snap" target="_blank" rel="noopener noreferrer">
+          Official SNAP information ↗
+        </a>
+        <br><br>
+        <a href="https://www.feedingamerica.org/find-your-local-foodbank" target="_blank" rel="noopener noreferrer">
+          Find a food bank ↗
+        </a>
+      </article>
+
+      <article class="card" data-search="health healthcare medicaid insurance medical coverage">
+        <h3>Healthcare Coverage</h3>
+        <p>
+          Explore public health coverage, eligibility information,
+          and ways to apply for health insurance.
+        </p>
+        <a href="https://www.medicaid.gov/" target="_blank" rel="noopener noreferrer">
+          Official Medicaid information ↗
+        </a>
+        <br><br>
+        <a href="https://www.healthcare.gov/" target="_blank" rel="noopener noreferrer">
+          Health insurance marketplace ↗
+        </a>
+      </article>
+
+      <article class="card" data-search="disability ssi ssdi social security income benefits">
+        <h3>Disability &amp; Income Benefits</h3>
+        <p>
+          Learn about Supplemental Security Income, Social Security
+          disability benefits, and application procedures.
+        </p>
+        <a href="https://www.ssa.gov/ssi/" target="_blank" rel="noopener noreferrer">
+          Official SSI information ↗
+        </a>
+        <br><br>
+        <a href="https://www.ssa.gov/disability/" target="_blank" rel="noopener noreferrer">
+          Social Security disability ↗
+        </a>
+      </article>
+
+      <article class="card" data-search="housing rent eviction shelter rental assistance">
+        <h3>Housing &amp; Rental Assistance</h3>
+        <p>
+          Find information about housing programs, rental support,
+          public housing, and housing counseling.
+        </p>
+        <a href="https://www.hud.gov/" target="_blank" rel="noopener noreferrer">
+          U.S. Department of Housing and Urban Development ↗
+        </a>
+      </article>
+
+      <article class="card" data-search="utilities electric gas water heating energy bills">
+        <h3>Utility &amp; Energy Assistance</h3>
+        <p>
+          Explore assistance for heating, cooling, electricity,
+          and other essential household utility costs.
+        </p>
+        <a href="https://www.acf.hhs.gov/ocs/programs/liheap" target="_blank" rel="noopener noreferrer">
+          Official LIHEAP information ↗
+        </a>
+      </article>
+
+      <article class="card" data-search="benefits application eligibility government assistance">
+        <h3>Benefits Applications &amp; Eligibility</h3>
+        <p>
+          Use the official government benefits finder to explore
+          programs that may fit your circumstances.
+        </p>
+        <a href="https://www.benefits.gov/" target="_blank" rel="noopener noreferrer">
+          Benefits information ↗
+        </a>
+      </article>
+    </section>
+
+    <section class="steps">
+      <h2>Preparing to Apply</h2>
+      <p>Requirements vary by program. Before applying, consider preparing:</p>
+      <ul>
+        <li>Identification and contact information.</li>
+        <li>Household details, if the program requests them.</li>
+        <li>Income, employment, or benefit information, if required.</li>
+        <li>Housing, utility, or medical expense documents, if applicable.</li>
+        <li>Any program-specific forms and supporting evidence.</li>
+      </ul>
+      <p>
+        Do not send sensitive documents to this website. Submit them only
+        through the responsible agency's verified process.
+      </p>
+    </section>
+
+    <section class="callout">
+      <h2>What if the first option doesn't work?</h2>
+      <p>
+        You may still have other routes to explore. Ask the agency about
+        alternative programs, missing documents, reconsideration or appeal
+        rights, and deadlines. Eligibility and appeal procedures vary.
+      </p>
+      <p>
+        If an application is denied, read the notice carefully and check
+        the deadline before deciding what to do next.
+      </p>
+      <p>
+        <strong>There Is Always Another Step.</strong>
+      </p>
+    </section>
+
+    <p>
+      <strong>Important:</strong> This page is an initial resource directory,
+      not a guarantee of eligibility or assistance. Program rules, availability,
+      and deadlines can change. Verify current details with the responsible
+      agency. Some links are national starting points; local options and
+      eligibility rules may differ.
+    </p>
+  </main>
+
+  <footer>
+    <p><strong>People First Resource Network</strong></p>
+    <p>Real resources. Real people. Real possibilities.</p>
+    <p><a href="index.html">Return to homepage</a></p>
+    <p>Free public resource navigation — a project in development.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById("search-form");
+    const input = document.getElementById("resource-search");
+    const cards = Array.from(document.querySelectorAll(".card"));
+    const result = document.getElementById("search-result");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const query = input.value.trim().toLowerCase();
+      let count = 0;
+
+      cards.forEach(function(card) {
+        const text = (
+          card.innerText + " " + (card.dataset.search || "")
+        ).toLowerCase();
+
+        const matches = !query || text.includes(query);
+        card.classList.toggle("hidden", !matches);
+
+        if (matches) count++;
+      });
+
+      if (!query) {
+        result.textContent = "Showing all assistance topics.";
+      } else if (count > 0) {
+        result.textContent = "Found " + count + " matching topic(s).";
+      } else {
+        result.textContent =
+          "No matching topic found. Try food, health, disability, housing, or utilities.";
+      }
+    });
+  </script>
+</body>
+</html>
