@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#12304a">
-  <meta name="description" content="Free education and homeschooling resources, learning support, special education information, and alternative learning pathways.">
+  <meta name="description" content="Explore free education resources, Pennsylvania homeschooling guidance, special education information, accessible learning, and adult education pathways.">
   <title>Education &amp; Homeschooling | People First Resource Network</title>
 
   <style>
@@ -22,9 +22,13 @@
       --focus: #f0bd4c;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -50,10 +54,11 @@
       margin: 0 auto;
     }
 
-    header {
+    header,
+    footer {
       background: var(--navy);
       color: var(--white);
-      padding: 20px 0;
+      padding: 22px 0;
     }
 
     .brand {
@@ -70,7 +75,10 @@
       margin-top: 12px;
     }
 
-    nav a { color: var(--white); }
+    nav a,
+    footer a {
+      color: #b8eeeb;
+    }
 
     .hero {
       background: linear-gradient(135deg, var(--navy), var(--navy-light));
@@ -103,8 +111,14 @@
       font-weight: 700;
     }
 
-    main { padding: 30px 0 48px; }
-    section { margin: 30px 0; }
+    main {
+      padding: 30px 0 48px;
+    }
+
+    section {
+      margin: 30px 0;
+      scroll-margin-top: 20px;
+    }
 
     h2 {
       color: var(--navy);
@@ -127,7 +141,9 @@
       padding: 20px;
     }
 
-    .intro { border-left: 5px solid var(--teal); }
+    .intro {
+      border-left: 5px solid var(--teal);
+    }
 
     .search-panel {
       background: var(--light-teal);
@@ -161,7 +177,10 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 275px), 1fr));
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 275px), 1fr)
+      );
       gap: 17px;
     }
 
@@ -172,8 +191,14 @@
       min-width: 0;
     }
 
-    .resource-card h3 { margin-top: 0; }
-    .resource-card p { margin-top: 0; }
+    .resource-card h3 {
+      margin-top: 0;
+    }
+
+    .resource-card p {
+      margin-top: 0;
+    }
+
     .resource-card a {
       margin-top: auto;
       font-weight: 700;
@@ -191,20 +216,24 @@
     }
 
     .checklist li,
-    .steps li { margin-bottom: 9px; }
+    .steps li {
+      margin-bottom: 9px;
+    }
+
+    .notice,
+    .warning {
+      border-radius: 8px;
+      padding: 16px;
+    }
 
     .notice {
       border-left: 5px solid var(--teal);
       background: var(--light-teal);
-      border-radius: 8px;
-      padding: 16px;
     }
 
     .warning {
       border-left: 5px solid #a96b15;
       background: #fff8e7;
-      border-radius: 8px;
-      padding: 16px;
     }
 
     .no-results {
@@ -215,25 +244,27 @@
       background: var(--white);
     }
 
-    footer {
-      background: var(--navy);
-      color: var(--white);
-      padding: 27px 0;
+    footer p {
+      margin: 7px 0;
     }
 
-    footer a { color: #b8eeeb; }
-    footer p { margin: 7px 0; }
-
     @media (max-width: 600px) {
-      .hero { padding: 34px 0; }
+      .hero {
+        padding: 34px 0;
+      }
+
       .intro,
       .panel,
       .resource-card,
-      .step-card { padding: 16px; }
+      .step-card {
+        padding: 16px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
+      html {
+        scroll-behavior: auto;
+      }
     }
   </style>
 </head>
@@ -241,7 +272,10 @@
 <body>
   <header>
     <div class="container">
-      <a class="brand" href="index.html">People First Resource Network</a>
+      <a class="brand" href="index.html">
+        People First Resource Network
+      </a>
+
       <nav aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="forms.html">Forms &amp; Paperwork Help</a>
@@ -252,14 +286,21 @@
 
   <div class="hero">
     <div class="container">
-      <div class="eyebrow">Division 4 · Education &amp; Homeschooling</div>
+      <div class="eyebrow">
+        Division 4 · Education &amp; Homeschooling
+      </div>
+
       <h1>Every learner deserves a path forward.</h1>
+
       <p>
-        Explore free learning resources, homeschooling guidance, special
-        education information, and alternative ways to learn. Whether
-        you're supporting a child, returning to education, or learning
-        something new, you deserve accessible information.
+        Explore free learning resources, homeschooling guidance,
+        special education information, adult learning, and
+        accessible ways to build new skills. Whether you are
+        supporting a child, returning to education, or learning
+        something new, you deserve practical information and
+        options that respect your circumstances.
       </p>
+
       <p class="tagline">There Is Always Another Step.</p>
     </div>
   </div>
@@ -267,299 +308,489 @@
   <main class="container">
     <section class="intro">
       <h2>Start with what the learner needs</h2>
+
       <p>
-        Every learner is different. Some need flexible schedules, accessible
-        materials, extra academic support, or alternatives to a traditional
-        classroom. Start with the topic that fits your situation and confirm
-        program rules with the relevant school or provider.
+        Every learner is different. Some need flexible schedules,
+        accessible materials, extra academic support, or alternatives
+        to a traditional classroom. Others need help understanding
+        homeschooling rules, finding free courses, or planning their
+        next educational step.
       </p>
+
       <p>
-        <strong>Free first:</strong> This page prioritizes free public
-        resources. Some organizations may offer paid services or have
-        eligibility requirements; check the details before enrolling.
+        <strong>Free first:</strong> This page prioritizes free
+        resources and official information. Some exams, programs,
+        equipment, or services may have fees or eligibility rules.
+        Check the details before enrolling or paying.
       </p>
     </section>
 
     <section class="search-panel" aria-labelledby="search-heading">
       <h2 id="search-heading">Find an education resource</h2>
+
       <label for="resource-search">Search by topic</label>
+
       <input
         id="resource-search"
         type="search"
-        placeholder="Try: homeschool, disability, GED, reading..."
+        placeholder="Try: homeschool, IEP, GED, reading, free courses..."
         autocomplete="off"
         aria-describedby="search-hint"
       >
+
       <p class="hint" id="search-hint">
-        This search filters the resources listed on this page. It is not
-        a live database.
+        This search filters the resources listed below. It is not
+        a live database. If nothing matches, try a shorter keyword.
       </p>
     </section>
 
     <section aria-labelledby="resources-heading">
-      <h2 id="resources-heading">Free education starting points</h2>
+      <h2 id="resources-heading">Education resources</h2>
 
       <div class="grid" id="resource-grid">
-        <article class="resource-card" data-search="homeschool homeschooling Pennsylvania PA laws requirements affidavit school district">
+
+        <article class="resource-card"
+          data-search="homeschool homeschooling Pennsylvania PA home education affidavit declaration school district annual evaluation portfolio laws">
           <span class="label">Homeschooling</span>
-          <h3>Pennsylvania Homeschooling Information</h3>
+          <h3>Pennsylvania Home Education Program</h3>
           <p>
-            Review Pennsylvania's official education information and verify
-            current homeschool requirements with the state or your school
-            district before beginning.
+            Find official state guidance about Pennsylvania home
+            education requirements, paperwork, evaluations, and
+            resources for families. Confirm current rules with
+            the appropriate school district.
           </p>
-          <a href="https://www.pa.gov/agencies/education.html" target="_blank" rel="noopener noreferrer">
-            Visit Pennsylvania Department of Education
+          <a
+            href="https://www.pa.gov/agencies/education/programs-and-services/instruction/elementary-and-secondary-education/home-education-and-private-tutoring"
+            target="_blank"
+            rel="noopener noreferrer">
+            Visit Pennsylvania's official homeschool resources
           </a>
         </article>
 
-        <article class="resource-card" data-search="special education disability IEP IDEA child school evaluation rights">
+        <article class="resource-card"
+          data-search="special education IEP IDEA disability child school evaluation rights individualized education program">
           <span class="label">Special Education</span>
-          <h3>Special Education Information</h3>
+          <h3>Federal IDEA Information</h3>
           <p>
-            Find federal information about special education, disability
-            rights, and support for eligible children in school.
+            Learn about the Individuals with Disabilities Education
+            Act, special education, evaluations, and services for
+            eligible children.
           </p>
-          <a href="https://sites.ed.gov/idea/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://sites.ed.gov/idea/"
+            target="_blank"
+            rel="noopener noreferrer">
             Explore IDEA information
           </a>
         </article>
 
-        <article class="resource-card" data-search="learning disabilities ADHD reading writing math dyslexia learning support">
-          <span class="label">Learning Support</span>
-          <h3>Learning Disabilities Resources</h3>
+        <article class="resource-card"
+          data-search="Pennsylvania special education family support early intervention disability preschool school age forms assessment">
+          <span class="label">Pennsylvania Support</span>
+          <h3>State Special Education Resources</h3>
           <p>
-            Explore information about learning difficulties and approaches
-            that may help learners access education.
+            Find Pennsylvania information about early intervention,
+            special education services, family resources, and
+            related forms.
           </p>
-          <a href="https://www.ed.gov/" target="_blank" rel="noopener noreferrer">
-            Visit the U.S. Department of Education
+          <a
+            href="https://www.pa.gov/agencies/education/programs-and-services/instruction/elementary-and-secondary-education/special-education"
+            target="_blank"
+            rel="noopener noreferrer">
+            Visit Pennsylvania special education resources
           </a>
         </article>
 
-        <article class="resource-card" data-search="free online courses adults digital literacy computer skills learning">
-          <span class="label">Online Learning</span>
-          <h3>Free Online Learning</h3>
+        <article class="resource-card"
+          data-search="free online learning math reading science history grammar school adults Khan Academy lessons practice">
+          <span class="label">Free Online Learning</span>
+          <h3>Khan Academy</h3>
           <p>
-            Khan Academy provides free learning materials across subjects
-            for learners at different levels.
+            Access free lessons and practice in subjects such as
+            math, science, reading, computing, and more.
           </p>
-          <a href="https://www.khanacademy.org/" target="_blank" rel="noopener noreferrer">
-            Explore Khan Academy
+          <a
+            href="https://www.khanacademy.org/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Start learning with Khan Academy
           </a>
         </article>
 
-        <article class="resource-card" data-search="adult education GED high school equivalency Pennsylvania diploma">
+        <article class="resource-card"
+          data-search="free computer skills technology digital literacy typing internet email office tutorials GCFGlobal">
+          <span class="label">Digital Skills</span>
+          <h3>GCFGlobal Learning</h3>
+          <p>
+            Explore free tutorials for computer basics, internet
+            skills, workplace technology, reading, math, and
+            everyday digital tasks.
+          </p>
+          <a
+            href="https://edu.gcfglobal.org/en/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Explore free tutorials
+          </a>
+        </article>
+
+        <article class="resource-card"
+          data-search="adult education GED high school equivalency diploma Pennsylvania test preparation adult literacy">
           <span class="label">Adult Education</span>
-          <h3>High School Equivalency</h3>
+          <h3>GED and High School Equivalency</h3>
           <p>
-            Find official information about high school equivalency options
-            and requirements in Pennsylvania.
+            Learn about high school equivalency testing and
+            preparation options. Check exam fees, eligibility,
+            and available assistance before registering.
           </p>
-          <a href="https://www.pa.gov/agencies/education.html" target="_blank" rel="noopener noreferrer">
-            Start with Pennsylvania education services
+          <a
+            href="https://www.ged.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Visit the official GED website
           </a>
         </article>
 
-        <article class="resource-card" data-search="library free books ebooks audiobooks internet computer access education">
-          <span class="label">Libraries</span>
-          <h3>Free Library Resources</h3>
+        <article class="resource-card"
+          data-search="public library Lawrence County New Castle Pennsylvania books ebooks audiobooks computer internet homework research">
+          <span class="label">Local Learning</span>
+          <h3>New Castle Public Library</h3>
           <p>
-            Public libraries may offer books, digital resources, internet
-            access, learning activities, and help finding information.
+            Explore local library services and ask about borrowing
+            books, digital resources, internet access, research
+            assistance, and learning programs.
           </p>
-          <a href="https://www.loc.gov/" target="_blank" rel="noopener noreferrer">
-            Explore Library of Congress resources
+          <a
+            href="https://www.ncdlc.org/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Visit the New Castle District Library Center
           </a>
         </article>
 
-        <article class="resource-card" data-search="college financial aid FAFSA grants student aid education costs">
+        <article class="resource-card"
+          data-search="college university financial aid FAFSA grants federal student aid tuition education eligible programs">
           <span class="label">College &amp; Training</span>
           <h3>Federal Student Aid</h3>
           <p>
-            Learn about federal student aid, financial aid applications,
-            and planning for eligible education programs.
+            Find official information about FAFSA, federal student
+            aid, and planning for eligible college or career
+            education programs.
           </p>
-          <a href="https://studentaid.gov/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://studentaid.gov/"
+            target="_blank"
+            rel="noopener noreferrer">
             Visit Federal Student Aid
           </a>
         </article>
 
-        <article class="resource-card" data-search="career training vocational skills workforce education job training">
+        <article class="resource-card"
+          data-search="career training vocational workforce skills job search education career planning free information">
           <span class="label">Career Skills</span>
-          <h3>Career Training &amp; Skills</h3>
+          <h3>CareerOneStop</h3>
           <p>
-            Explore education and training information for career planning
-            and skill development.
+            Explore career information, occupational skills,
+            training options, and tools for planning a future
+            career.
           </p>
-          <a href="https://www.careeronestop.org/" target="_blank" rel="noopener noreferrer">
-            Visit CareerOneStop
+          <a
+            href="https://www.careeronestop.org/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Explore career resources
           </a>
         </article>
 
-        <article class="resource-card" data-search="early childhood preschool child development Head Start family education">
+        <article class="resource-card"
+          data-search="early childhood preschool infant toddler Head Start Early Head Start family development eligible children">
           <span class="label">Early Learning</span>
-          <h3>Head Start &amp; Early Learning</h3>
+          <h3>Head Start and Early Head Start</h3>
           <p>
-            Learn about Head Start and Early Head Start programs for
-            eligible young children and families.
+            Learn about early childhood education and family
+            support programs for eligible young children.
           </p>
-          <a href="https://www.headstart.gov/" target="_blank" rel="noopener noreferrer">
-            Visit Head Start
+          <a
+            href="https://www.headstart.gov/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Explore Head Start resources
           </a>
         </article>
 
-        <article class="resource-card" data-search="accessibility accessible learning disability assistive technology digital access">
+        <article class="resource-card"
+          data-search="assistive technology accessibility disability learning communication hearing vision mobility equipment AT3 Center">
           <span class="label">Accessible Learning</span>
-          <h3>Accessible Technology Resources</h3>
+          <h3>Assistive Technology Resources</h3>
           <p>
-            Explore information about assistive technology and accessibility
-            that may support learning and participation.
+            Explore information about assistive technology that
+            may help people learn, communicate, access information,
+            or participate more independently.
           </p>
-          <a href="https://www.at3center.net/" target="_blank" rel="noopener noreferrer">
-            Find assistive technology resources
+          <a
+            href="https://at3center.net/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Explore assistive technology information
           </a>
         </article>
+
+        <article class="resource-card"
+          data-search="free English learning English language second language adults reading writing pronunciation USA Learns">
+          <span class="label">English Learning</span>
+          <h3>USA Learns</h3>
+          <p>
+            Access free online English learning materials for
+            people who want to improve English skills.
+          </p>
+          <a
+            href="https://www.usalearns.org/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Start learning English
+          </a>
+        </article>
+
       </div>
 
-      <p class="no-results" id="no-results" role="status" aria-live="polite">
-        No matching resource was found on this page. Try another keyword
-        or visit the Pennsylvania Department of Education for state-specific
-        information.
+      <p
+        class="no-results"
+        id="no-results"
+        role="status"
+        aria-live="polite">
+        No matching resource was found on this page. Try another
+        keyword or browse the full list above.
       </p>
     </section>
 
-    <section>
-      <h2>Considering homeschooling in Pennsylvania?</h2>
+    <section aria-labelledby="homeschool-heading">
+      <h2 id="homeschool-heading">
+        Considering homeschooling in Pennsylvania?
+      </h2>
+
       <div class="panel">
         <p>
-          Homeschooling rules vary by jurisdiction and may include formal
-          notice, documentation, evaluation, or recordkeeping requirements.
-          Do not rely on an old checklist or another family's experience
-          as proof of current requirements.
+          Pennsylvania has specific requirements for home education
+          programs. Before withdrawing a child from school or
+          beginning a program, read the current state guidance and
+          confirm which procedures apply to your circumstances.
         </p>
+
         <ul class="checklist">
-          <li>☐ Check current Pennsylvania homeschool requirements.</li>
-          <li>☐ Confirm which school district or authority handles the required paperwork.</li>
-          <li>☐ Check deadlines and the current version of any required forms.</li>
-          <li>☐ Ask how educational records, evaluations, and attendance must be documented.</li>
-          <li>☐ Keep copies of submitted forms and written responses.</li>
-          <li>☐ If the learner has a disability or needs accommodations, ask the relevant agencies or qualified advocates about applicable options and limitations.</li>
+          <li>
+            ☐ Read the current Pennsylvania Home Education and
+            Private Tutoring guidance.
+          </li>
+          <li>
+            ☐ Confirm which school district handles the required
+            documentation.
+          </li>
+          <li>
+            ☐ Review the applicable affidavit or unsworn declaration
+            and educational objectives requirements.
+          </li>
+          <li>
+            ☐ Check the current rules for health documentation,
+            educational records, evaluations, and deadlines.
+          </li>
+          <li>
+            ☐ Ask the district how to submit documents and keep
+            copies of everything sent.
+          </li>
+          <li>
+            ☐ If the child has a disability or needs accommodations,
+            ask the relevant education authority or a qualified
+            advocate about applicable options.
+          </li>
         </ul>
+
+        <p>
+          <a
+            href="https://www.pa.gov/agencies/education/programs-and-services/instruction/elementary-and-secondary-education/home-education-and-private-tutoring"
+            target="_blank"
+            rel="noopener noreferrer">
+            Read the official Pennsylvania home education guidance
+          </a>
+        </p>
+
         <p class="muted">
-          This is a preparation checklist, not a complete statement of
-          Pennsylvania law. Verify each requirement with official sources.
+          This checklist is a starting point, not a complete
+          statement of Pennsylvania law. Requirements can vary
+          with the circumstances and may change.
         </p>
       </div>
     </section>
 
-    <section>
-      <h2>When a learner needs extra support</h2>
+    <section aria-labelledby="support-heading">
+      <h2 id="support-heading">When a learner needs extra support</h2>
+
       <div class="grid">
         <article class="step-card">
           <h3>School is not working</h3>
           <p>
-            Write down the learning barriers, contact the school or relevant
-            education authority, and ask what support or evaluation processes
-            may be available.
+            Write down the learning barriers and examples of what
+            is happening. Ask the school or relevant education
+            authority about available support, evaluation, and
+            problem-solving procedures.
           </p>
         </article>
 
         <article class="step-card">
-          <h3>Learning needs are not understood</h3>
+          <h3>A disability may affect learning</h3>
           <p>
-            Keep examples of the difficulty, ask which professional or
-            school team can assess it, and request information about
-            accessible learning approaches.
+            Keep notes about the learner's needs and ask which
+            school team, agency, or qualified professional can
+            explain evaluation and accommodation options.
           </p>
         </article>
 
         <article class="step-card">
           <h3>Traditional education is not a fit</h3>
           <p>
-            Compare lawful options such as homeschooling, adult education,
-            online learning, vocational programs, or alternative schedules.
-            Requirements and eligibility differ.
+            Compare options such as homeschooling, online learning,
+            adult education, vocational programs, or alternative
+            schedules. Check legal requirements and eligibility
+            before making a change.
           </p>
         </article>
 
         <article class="step-card">
           <h3>Education costs too much</h3>
           <p>
-            Check public libraries, free course materials, community
-            programs, grants, and financial aid before paying for a course
-            or service.
+            Start with public libraries, free online lessons,
+            publicly funded programs, and financial aid information
+            before paying for courses or materials.
           </p>
         </article>
       </div>
     </section>
 
-    <section>
-      <h2>Your learning support plan</h2>
+    <section aria-labelledby="learning-plan-heading">
+      <h2 id="learning-plan-heading">Build a learning support plan</h2>
+
       <div class="panel">
-        <p>Use these prompts in your own notes to identify practical next steps.</p>
+        <p>
+          Use these prompts in your own notes. You do not need
+          to solve everything at once.
+        </p>
+
         <ol class="steps">
           <li>What does the learner want or need to learn?</li>
           <li>What is making learning difficult right now?</li>
-          <li>What format works best: in person, online, audio, visual, or hands-on?</li>
-          <li>What free resources are available?</li>
-          <li>Does the learner need accommodations, evaluation, or specialist guidance?</li>
-          <li>What is the next small step, and who can answer questions?</li>
+          <li>
+            Which format works best: in person, online, audio,
+            visual, hands-on, or a combination?
+          </li>
+          <li>Which free resources could help?</li>
+          <li>
+            Is an evaluation, accommodation, or specialist guidance
+            needed?
+          </li>
+          <li>
+            What is the next manageable step, and who can answer
+            questions?
+          </li>
         </ol>
+
+        <p>
+          <strong>Helpful tip:</strong> Keep a simple record of
+          questions, applications, important dates, contacts,
+          and responses. It can make follow-up easier.
+        </p>
       </div>
     </section>
 
-    <section>
-      <h2>Find another way</h2>
+    <section aria-labelledby="alternatives-heading">
+      <h2 id="alternatives-heading">If the first option does not work</h2>
+
       <div class="notice">
         <p>
-          <strong>If one program is unavailable, too expensive, or not a
-          good fit, there may be another route.</strong>
+          <strong>
+            A closed door does not mean that learning has to stop.
+          </strong>
         </p>
+
         <ul>
-          <li>Ask a public library about free materials and learning access.</li>
-          <li>Ask the school district or state education agency about official options.</li>
-          <li>Explore free online learning before purchasing a course.</li>
-          <li>Ask education providers about fee waivers, financial aid, or alternative schedules.</li>
-          <li>For disability-related questions, consult the appropriate education authority or a qualified advocate.</li>
+          <li>
+            Ask a public library about free materials and learning
+            access.
+          </li>
+          <li>
+            Ask the school district or state education agency about
+            official options and procedures.
+          </li>
+          <li>
+            Try free online learning before purchasing a course.
+          </li>
+          <li>
+            Ask providers about financial aid, fee waivers, or
+            flexible schedules.
+          </li>
+          <li>
+            For disability-related concerns, consult the appropriate
+            education authority or a qualified advocate.
+          </li>
         </ul>
       </div>
     </section>
 
-    <section>
-      <h2>Keep exploring</h2>
+    <section aria-labelledby="more-heading">
+      <h2 id="more-heading">Keep exploring the network</h2>
+
       <div class="grid">
         <article class="resource-card">
           <h3>Forms &amp; Paperwork Help</h3>
-          <p>Prepare documents, understand forms, and organize your next steps.</p>
+          <p>
+            Prepare documents, organize paperwork, and plan your
+            next steps.
+          </p>
           <a href="forms.html">Visit Division 3</a>
         </article>
 
         <article class="resource-card">
-          <h3>Disability &amp; Accessibility Center</h3>
-          <p>Explore disability information, accessibility, and support resources.</p>
-          <a href="index.html">Explore the homepage</a>
+          <h3>Benefits &amp; Basic Needs</h3>
+          <p>
+            Explore starting points for basic needs and assistance
+            programs.
+          </p>
+          <a href="benefits.html">Visit Division 1</a>
         </article>
 
         <article class="resource-card">
-          <h3>All Resource Divisions</h3>
-          <p>Return to the main page to explore other areas of the network.</p>
-          <a href="index.html">Return to the homepage</a>
+          <h3>Disability &amp; Accessibility Center</h3>
+          <p>
+            Explore disability information, accessibility, and
+            support resources.
+          </p>
+          <a href="disability.html">Visit Division 5</a>
         </article>
       </div>
     </section>
 
-    <section class="warning">
-      <h2>Important information</h2>
+    <section class="warning" aria-labelledby="important-heading">
+      <h2 id="important-heading">Important information</h2>
+
       <p>
-        This page provides general information and starting points, not a
-        live directory of available services. Program availability, fees,
-        eligibility, and requirements can change. Confirm current details
-        with the responsible organization.
+        This page provides general information and starting points.
+        It is not a live directory, and it does not guarantee that
+        a program has openings or that a person qualifies.
       </p>
+
       <p>
-        This website is not a government agency and does not replace
-        individualized legal, educational, medical, or professional advice.
+        Program availability, costs, eligibility, websites, and
+        requirements can change. Confirm current details with
+        the responsible organization before relying on them.
+      </p>
+
+      <p>
+        People First Resource Network is not a government agency
+        and does not replace individualized legal, educational,
+        medical, or professional advice.
+      </p>
+
+      <p>
+        <strong>Privacy reminder:</strong> Avoid posting sensitive
+        personal information publicly when asking for help online.
       </p>
     </section>
   </main>
@@ -576,7 +807,9 @@
 
   <script>
     const searchInput = document.getElementById("resource-search");
-    const cards = document.querySelectorAll(".resource-card[data-search]");
+    const cards = document.querySelectorAll(
+      ".resource-card[data-search]"
+    );
     const noResults = document.getElementById("no-results");
 
     searchInput.addEventListener("input", function () {
@@ -584,8 +817,10 @@
       let visibleCount = 0;
 
       cards.forEach(function (card) {
-        const searchableText =
-          (card.innerText + " " + card.dataset.search).toLowerCase();
+        const searchableText = (
+          card.innerText + " " + card.dataset.search
+        ).toLowerCase();
+
         const matches = searchableText.includes(query);
 
         card.hidden = !matches;
