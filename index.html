@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#12304a">
+  <meta name="description" content="Free resource navigation, practical guidance, and alternative paths for individuals and families.">
+  <title>People First Resource Network</title>
+  <style>
+    :root {
+      --navy: #12304a;
+      --teal: #168c8c;
+      --pale: #eaf7f6;
+      --white: #ffffff;
+      --ink: #203746;
+      --muted: #526777;
+      --border: #d6e5e8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6fafb;
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    a { color: #086c75; }
+
+    .topbar {
+      background: var(--navy);
+      color: white;
+      padding: 18px 20px;
+    }
+
+    .brand {
+      max-width: 1100px;
+      margin: auto;
+      font-weight: 700;
+      font-size: 1.15rem;
+    }
+
+    .brand span { color: #79dfd2; }
+
+    .hero {
+      padding: 55px 20px 45px;
+      text-align: center;
+      background: linear-gradient(145deg, #eaf7f6, #ffffff);
+    }
+
+    .hero-inner {
+      max-width: 780px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: #086c75;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+    }
+
+    h1 {
+      color: var(--navy);
+      font-size: clamp(2rem, 7vw, 3.5rem);
+      line-height: 1.15;
+      margin: 14px 0;
+    }
+
+    .tagline {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--teal);
+    }
+
+    .hero p { color: var(--muted); }
+
+    .search-box {
+      display: flex;
+      gap: 10px;
+      max-width: 650px;
+      margin: 25px auto 12px;
+    }
+
+    .search-box input {
+      flex: 1;
+      min-width: 0;
+      padding: 14px;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: var(--teal);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 13px 19px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:hover { background: #106e72; }
+
+    .hint { font-size: 0.9rem; }
+
+    main {
+      max-width: 1100px;
+      padding: 30px 18px 55px;
+      margin: auto;
+    }
+
+    .section-heading {
+      color: var(--navy);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 28px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 3px 12px rgba(18, 48, 74, 0.04);
+    }
+
+    .card h3 {
+      color: var(--navy);
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+      margin: 0;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 12px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .card a:hover { text-decoration: underline; }
+
+    .promise {
+      margin-top: 38px;
+      padding: 30px 22px;
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      border-radius: 16px;
+    }
+
+    .promise h2 { margin-top: 0; }
+    .promise p { max-width: 720px; margin: auto; }
+
+    .notice {
+      margin-top: 24px;
+      padding: 16px;
+      border-left: 4px solid var(--teal);
+      background: var(--pale);
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      background: #e7f0f3;
+      padding: 24px 16px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer p { margin: 5px; }
+
+    .hidden { display: none !important; }
+
+    #search-message {
+      text-align: center;
+      color: var(--navy);
+      font-weight: 700;
+      margin: 18px 0;
+    }
+
+    @media (max-width: 520px) {
+      .search-box { flex-direction: column; }
+      .search-box button { width: 100%; }
+      .hero { padding-top: 38px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">People First <span>Resource Network</span></div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Real help starts here</div>
+      <h1>You deserve a way forward.</h1>
+      <div class="tagline">Real resources. Real people. Real possibilities.</div>
+      <p>
+        Find resources, understand your options, prepare paperwork,
+        and discover another path when the first one doesn't work.
+      </p>
+
+      <form class="search-box" id="search-form">
+        <input
+          id="resource-search"
+          type="search"
+          placeholder="What do you need help with?"
+          aria-label="Search resource divisions"
+        >
+        <button type="submit">Find Resources</button>
+      </form>
+      <div class="hint">You don't need to know the program name to get started.</div>
+    </div>
+  </section>
+
+  <main>
+    <section aria-labelledby="divisions-heading">
+      <h2 class="section-heading" id="divisions-heading">Explore Our Resource Divisions</h2>
+      <p class="section-intro">
+        Start with what you're facing. Explore practical information and
+        resource pathways designed around real-life needs.
+      </p>
+
+      <div class="cards" id="resource-cards">
+        <article class="card" data-search="benefits basic needs snap food pantry healthcare medicaid rent utilities money">
+          <h3>1. Benefits &amp; Basic Needs</h3>
+          <p>Food assistance, healthcare, public benefits, housing help, and essential expenses.</p>
+          <a href="#next-steps">Explore this area →</a>
+        </article>
+
+        <article class="card" data-search="pro se legal support court divorce custody housing eviction debt legal aid civil">
+          <h3>2. Pro Se Legal Support</h3>
+          <p>Understand civil court processes, paperwork, deadlines, and legal aid options.</p>
+          <a href="#next-steps">Explore this area →</a>
+        </article>
+
+        <article class="card" data-search="forms paperwork applications letters checklists appeals documents">
+          <h3>3. Forms &amp; Paperwork Help</h3>
+          <p>Plain-language form guidance, document checklists, templates, and application preparation.</p>
+          <a href="#next-steps">Explore this area →</a>
+        </article>
+
+        <article class="card" data-search="education homeschooling homeschool curriculum school learning lessons">
+          <h3>4. Education &amp; Homeschooling</h3>
+          <p>Learning materials, homeschool requirements, educational options, and family learning support.</p>
+          <a href="#next-steps">Explore this area →</a>
+        </article>
+
+        <article class="card" data-search="disability accessibility ssi ssdi accommodations assistive technology evaluation">
+          <h3>5. Disability &amp; Accessibility Center</h3>
+          <p>Disability benefits, accommodations, accessibility tools, advocacy, and support.</p>
+          <a href="#next-steps">Explore this area →</a>
+        </article>
+
+        <article class="card" data-search="education skills career training scholarships college certificates trades jobs">
+          <h3>6. Further Education, Skills &amp; Career Pathways</h3>
+          <p>Training, scholarships, vocational programs, certificates, and career planning.</p>
+          <a href="#next-steps">Explore this area →</a>
+        </article>
+
+        <article class="card" data-search="small business independent workers startup grants licenses freelance self employed">
+          <h3>7. Small Business &amp; Independent Workers</h3>
+          <p>Business planning, registration, training, funding opportunities, and self-employment resources.</p>
+          <a href="#next-steps">Explore this area →</a>
+        </article>
+
+        <article class="card" data-search="pet care animals veterinarian vet food vaccines spay neuter dogs cats reptiles">
+          <h3>8. Pet Care &amp; Animal Wellbeing</h3>
+          <p>Affordable veterinary care, pet food assistance, preventive care, and animal welfare.</p>
+          <a href="#next-steps">Explore this area →</a>
+        </article>
+
+        <article class="card" data-search="everyday essentials internet phone clothing transportation vehicle car bus rides">
+          <h3>9. Everyday Essentials, Connectivity &amp; Transportation</h3>
+          <p>Internet, phones, clothing, transportation, vehicle ownership, and consumer guidance.</p>
+          <a href="#next-steps">Explore this area →</a>
+        </article>
+
+        <article class="card" data-search="homelessness housing crisis shelter survival food showers laundry emergency eviction">
+          <h3>10. Homelessness, Housing Crisis &amp; Survival Support</h3>
+          <p>Emergency shelter, essential services, housing assistance, and safer alternatives.</p>
+          <a href="#next-steps">Explore this area →</a>
+        </article>
+
+        <article class="card" data-search="pregnancy parenthood family planning contraception prenatal baby parenting child support">
+          <h3>11. Pregnancy, Parenthood &amp; Family Planning</h3>
+          <p>Reproductive health information, pregnancy support, parenting resources, and family assistance.</p>
+          <a href="#next-steps">Explore this area →</a>
+        </article>
+
+        <article class="card" data-search="mental health emotional wellbeing therapy psychiatry anxiety depression ptsd adhd">
+          <h3>12. Mental Health &amp; Emotional Wellbeing</h3>
+          <p>Mental health education, affordable care options, support services, and practical tools.</p>
+          <a href="#next-steps">Explore this area →</a>
+        </article>
+
+        <article class="card" data-search="local community resources nonprofits libraries clinics food banks support groups">
+          <h3>13. Local &amp; Community Resource Finder</h3>
+          <p>Community organizations, local services, nonprofits, and regional resource options.</p>
+          <a href="#next-steps">Explore this area →</a>
+        </article>
+      </div>
+
+      <p id="search-message" aria-live="polite"></p>
+    </section>
+
+    <section class="promise" id="next-steps">
+      <h2>There Is Always Another Step.</h2>
+      <p>
+        If a resource is unavailable, a waiting list is too long,
+        an application is denied, or a cost is out of reach, you
+        deserve to know what alternatives may exist.
+      </p>
+    </section>
+
+    <div class="notice">
+      <strong>Our commitment:</strong> We aim to prioritize free and affordable
+      options, use reliable sources, respect privacy, and make information
+      understandable. Resource details can change, so important eligibility,
+      cost, deadline, and availability information should be confirmed with
+      the responsible organization. Legal and medical information is educational
+      and does not replace individualized professional advice.
+    </div>
+  </main>
+
+  <footer>
+    <p><strong>People First Resource Network</strong></p>
+    <p>Real resources. Real people. Real possibilities.</p>
+    <p>Free public resource navigation — a project in development.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById("search-form");
+    const searchInput = document.getElementById("resource-search");
+    const cards = Array.from(document.querySelectorAll(".card"));
+    const message = document.getElementById("search-message");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const query = searchInput.value.trim().toLowerCase();
+      let visibleCount = 0;
+
+      cards.forEach(function (card) {
+        const searchableText =
+          card.innerText + " " + (card.dataset.search || "");
+        const matches = !query || searchableText.toLowerCase().includes(query);
+
+        card.classList.toggle("hidden", !matches);
+
+        if (matches) visibleCount++;
+      });
+
+      if (!query) {
+        message.textContent = "Showing all 13 resource divisions.";
+      } else if (visibleCount > 0) {
+        message.textContent =
+          "Found " + visibleCount + " matching division(s). Choose one to explore.";
+      } else {
+        message.textContent =
+          "No exact division match yet. Try a broader word, such as food, housing, health, or paperwork.";
+      }
+    });
+  </script>
+</body>
+</html>
